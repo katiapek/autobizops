@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Hero Section -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold">AI-Powered Blog Generator</h1>
+    <p class="lead mt-3 mb-4">
+      Turn your ideas into publish-ready articles.
+      Just enter your keyword, niche, and personal insights — we’ll handle the rest.
+    </p>
+  </div>
+</section>
+
+<div class="container py-5">
+  <h2 class="text-center mb-4">Generate Blog Content</h2>
+  <form class="mx-auto" style="max-width: 600px;">
+
+    <!-- Targeted Keyword -->
+    <div class="mb-3">
+      <label for="keyword" class="form-label fw-bold">Targeted Keyword</label>
+      <input type="text" class="form-control" id="keyword" placeholder="e.g. business automation">
+    </div>
+
+    <!-- Industry Niche -->
+    <div class="mb-3">
+      <label for="niche" class="form-label fw-bold">Industry Niche</label>
+      <input type="text" class="form-control" id="niche" placeholder="e.g. SaaS, e-commerce, healthcare">
+    </div>
+
+    <!-- Personal Take -->
+    <div class="mb-3">
+      <label for="personalTake" class="form-label fw-bold">Personal Take</label>
+      <textarea class="form-control" id="personalTake" rows="5"
+                placeholder="Add your insights, experiences, or preferred angle for the article"></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-lg px-5">Generate</button>
+    </div>
+
+  </form>
+</div>
+
+{% endblock %}

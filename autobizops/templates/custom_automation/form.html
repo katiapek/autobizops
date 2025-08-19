@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Hero Section -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Custom Automation Inquiry</h1>
+    <p class="lead mt-3 mb-4">
+      Ask us if we can implement your idea, how long will it take and how much it will cost.
+    </p>
+  </div>
+</section>
+
+<div class="container py-5">
+  <h2 class="text-center mb-4">Ask for Customised Automation</h2>
+  <form class="mx-auto" style="max-width: 600px;">
+
+    <!-- Related to Software -->
+    <div class="mb-3">
+      <label for="software" class="form-label fw-bold">Targeted Keyword</label>
+      <input type="text" class="form-control" id="software" placeholder="e.g. excel, google sheets, wordpress">
+    </div>
+
+
+    <!-- How it supposed to work -->
+    <div class="mb-3">
+      <label for="wfDescription" class="form-label fw-bold">How would you like automation to work?</label>
+      <textarea class="form-control" id="wfDescription" rows="5"
+                placeholder="I'd like to save my time by ..."></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-lg px-5">Send Inquiry</button>
+    </div>
+
+  </form>
+</div>
+
+{% endblock %}

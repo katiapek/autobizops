@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Hero Section -->
+<div class="container text-center mt-5">
+  <h1 class="display-5 fw-bold">Automate Your Business Operations</h1>
+  <p class="lead mt-3">
+    Save hours every week by letting automation handle the routine tasks,
+    so you can focus on where you’re truly needed.
+  </p>
+</div>
+
+
+<div class="container d-flex text-center justify-content-center align-items-center my-1">
+    <div class="row my-4">
+        <div class="col-md-6 d-flex justify-content-center">
+          <div class="card my-3">
+
+
+              <div class="card-body">
+                <img src="{{url_for('static', filename='icons/WriteBlogPost.png')}}" class="card-img-top w-25 my-2" alt="Icon presenting a paper and pen to write a new blog post.">
+                <h5 class="card-title">Generate A Blog Post</h5>
+                <p class="card-text">Click here to generate a fully researched and high SEO scoring blog posts in a matter of minutes.</p>
+                <a href="{{url_for('blog_generator.form')}}" class="btn btn-primary my-2">Generate Blog Post</a>
+
+
+                  <p class="card-footer text-body-secondary mt-4">Credits: 25</p>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center">
+          <div class="card my-3">
+
+
+              <div class="card-body">
+                  <img src="{{url_for('static', filename='icons/CreateCustom.png')}}" class="card-img-top w-25 my-2" alt="Icon presenting a pen and gearwheel to generate a new, custom automation">
+                <h5 class="card-title">Build Custom Automation</h5>
+                <p class="card-text">Send us your automation idea here and we will come back to you with a timeline and costs.</p>
+                <a href="{{url_for('custom_automation.form')}}" class="btn btn-primary my-2">Build Custom Automation</a>
+                  <p class="card-footer text-body-secondary mt-4">Credits: 0</p>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
