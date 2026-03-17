@@ -108,6 +108,11 @@ See [`.env.example`](.env.example) for all required variables:
 pytest
 ```
 
+## Related
+
+- **Demo & screenshots:** [autobizops-demo](https://github.com/katiapek/autobizops-demo)
+
+
 ## License
 
 This project is for portfolio/demonstration purposes.
