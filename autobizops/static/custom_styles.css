@@ -1,0 +1,24 @@
+body {
+font-family: 'Roboto', sans-serif;
+}
+.navbar-brand {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.navbar {
+  background: linear-gradient(90deg, #e3f2fd 0%, #bbdefb 100%);
+}
+.nav-link {
+  color: #0d47a1 !important;
+  margin: 0 0.5rem;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+.nav-link:hover, .nav-link.active {
+  color: #0d6efd !important;
+  border-bottom: 1px solid #0d6efd;
+}
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Navigation Buttons -->
+<div class="d-flex  justify-content-center my-4">
+  <div class="btn-group" role="group" aria-label="Iteration navigation">
+    <button onclick="showPrev()" type="button" class="btn btn-primary">Previous version</button>
+    <button onclick="showNext()" type="button" class="btn btn-primary">Next version</button>
+  </div>
+</div>
+
+<!-- Iteration Content Card -->
+<div class="container">
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h5 class="card-title text-center fw-bold mb-3">Iteration Preview</h5>
+      <div id="iteration-content">
+        {{ iterations[0] | safe }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Original Inputs Card -->
+  <div class="card shadow-sm mb-5">
+    <div class="card-body">
+      <h5 class="card-title text-center fw-bold mb-3">Original Inputs</h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Keyword:</strong> {{ post.original_inputs.keyword }}</li>
+        <li class="list-group-item"><strong>Niche:</strong> {{ post.original_inputs.niche }}</li>
+        <li class="list-group-item"><strong>Personal Take:</strong> {{ post.original_inputs.personal_take }}</li>
+        <li class="list-group-item"><strong>Target Audience:</strong> {{ post.original_inputs.target_audience }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  let iterations = {{ iterations|tojson|safe }};
+  let i = 0;
+
+  function renderIteration() {
+    document.getElementById("iteration-content").innerHTML = iterations[i];
+  }
+
+  function showPrev() {
+    if (i > 0) {
+      i--;
+      renderIteration();
+    }
+  }
+
+  function showNext() {
+    if (i < iterations.length - 1) {
+      i++;
+      renderIteration();
+    }
+  }
+</script>
+
+{% endblock %}

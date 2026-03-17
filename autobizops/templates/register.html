@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+  <div class="card shadow-sm border-0" style="max-width: 450px; width: 100%;">
+    <div class="card-body p-4">
+      <h2 class="text-center fw-bold mb-2">Register</h2>
+      <p class="text-center text-muted mb-4">Get 25 FREE credits to spend on automations</p>
+
+      <form method="POST">
+        {{form.hidden_tag()}}
+
+        <!-- Username -->
+        <div class="mb-3">
+          {{form.username.label(class="form-label fw-semibold")}}
+          {{form.username(class="form-control form-control-lg")}}
+          {% for error in form.username.errors %}
+            <div class="text-warning small mt-1">{{error}}</div>
+          {% endfor %}
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          {{form.email.label(class="form-label fw-semibold")}}
+          {{form.email(class="form-control form-control-lg")}}
+          {% for error in form.email.errors %}
+            <div class="text-warning small mt-1">{{error}}</div>
+          {% endfor %}
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          {{form.password.label(class="form-label fw-semibold")}}
+          {{form.password(class="form-control form-control-lg")}}
+          {% for error in form.password.errors %}
+            <div class="text-warning small mt-1">{{error}}</div>
+          {% endfor %}
+        </div>
+
+        <!-- Password Confirmation -->
+        <div class="mb-3">
+          {{form.pass_confirm.label(class="form-label fw-semibold")}}
+          {{form.pass_confirm(class="form-control form-control-lg")}}
+        </div>
+
+        <!-- Submit -->
+        <div class="d-grid mt-4">
+          {{form.submit(class="btn btn-primary btn-lg")}}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

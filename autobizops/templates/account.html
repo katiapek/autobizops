@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Hero Section -->
+<section class="py-0 text-center">
+  <div class="container">
+    <h1 class="h2 fw-bold mb-2">User account</h1>
+    <p class="lead text-muted mb-0">
+      See your automations and how much time you’ve saved.
+    </p>
+  </div>
+</section>
+
+
+<div>
+  <table id="postsTable" class="display">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Creation Date</th>
+      <th>Automation</th>
+      <th>Keyword</th>
+      <th>Status</th>
+      <th>Link</th>
+    </tr>
+    </thead>
+
+    {% for post in user_blog_posts %}
+    <tr>
+      <td>{{post.id}}</td>
+      <td>{{post.creation_date}}</td>
+      <td>{{post.automation}}</td>
+      <td>{{post.keyword}}</td>
+      <td>{{post.status}}</td>
+      <td>
+        {% if post.status == 'Completed' %}
+          <a href="{{ url_for('blog_post_generator.blog_post', blog_post_id=post.id) }}">Go</a>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+<script>
+$(document).ready(function () {
+    $('#postsTable').DataTable({"order": []});
+});
+</script>
+{% endblock %}

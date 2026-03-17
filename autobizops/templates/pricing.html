@@ -1,72 +1,109 @@
 {% extends "base.html" %}
 {% block content %}
 <!-- Pricing Hero Section -->
-<div class="container text-center mt-5 mb-5">
-  <h1 class="display-5 fw-bold">Simple, Transparent Pricing</h1>
-  <p class="lead mt-3">
-    Choose a plan that fits your business needs.
-    Start free, scale as you grow, and only pay for what you actually use.
-  </p>
-</div>
+<section class="py-0 text-center">
+  <div class="container">
+    <h1 class="h2 fw-bold mb-2">Simple, Transparent Pricing</h1>
+    <p class="lead text-muted mb-0">
+     Choose a plan that fits your business needs.
+      Start free, scale as you grow, and only pay for what you actually use.
+    </p>
+  </div>
+</section>
 
 <div class="container py-5">
-  <div class="row g-4">
+  <div class="row g-4 justify-content-center">
 
     <!-- Free Plan -->
     <div class="col-md-6 col-lg-3">
-      <div class="card text-center border-primary">
-        <div class="card-header bg-primary text-white">
+      <div class="card text-center rounded-4 shadow-sm h-100">
+        <div class="card-header bg-light text-primary fw-bold fs-5">
           Free
         </div>
-        <div class="card-body">
-          <h5 class="card-title">25 Credits</h5>
-          <p class="card-text">Get 25 credits for FREE.</p>
-          <h4 class="fw-bold">$0</h4>
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div>
+            <h5 class="card-title fs-4 fw-bold">25 Credits</h5>
+            <p class="card-text text-muted">Get 25 credits for FREE.</p>
+            <h4 class="fw-bold text-primary">$0</h4>
+            <ul class="list-unstyled text-start mt-3 mb-3">
+              <li>✅ Basic Automations</li>
+              <li>✅ AI Support</li>
+            </ul>
+          </div>
           <a href="#" class="btn btn-outline-primary mt-3">Register NOW</a>
         </div>
       </div>
     </div>
 
-    <!-- Starter Plan -->
-    <div class="col-md-6 col-lg-3">
-      <div class="card text-center border-success">
-        <div class="card-header bg-success text-white">
-          Starter
+    <!-- Starter Plan (Most Popular) -->
+  <!-- Starter Plan (Most Popular) -->
+  <div class="col-md-6 col-lg-3">
+    <div class="card text-center rounded-4 shadow-lg border-primary h-100">
+      <div class="card-header bg-primary text-white fw-bold fs-5">
+        Starter
+      </div>
+      <div class="card-body d-flex flex-column justify-content-between">
+        <div>
+          <h5 class="card-title fs-4 fw-bold">100 Credits / month</h5>
+          <p class="card-text text-muted">Equivalent to 4 blog posts</p>
+          <h4 class="fw-bold text-primary">$90 / month</h4>
+
+          <!-- Most Popular Badge -->
+          <span class="badge text-dark" style="background-color: #FFD633; font-weight: 600; font-size: 0.9rem; margin: 0.5rem 0;">Most Popular</span>
+
+          <ul class="list-unstyled text-start mt-3 mb-3">
+            <li>✅ AI-Powered Blog Generation</li>
+            <li>✅ Custom Automation Support</li>
+            <li>✅ Export to PDF & CSV</li>
+            <li>✅ Email Support</li>
+          </ul>
         </div>
-        <div class="card-body">
-          <h5 class="card-title">100 Credits / month</h5>
-          <p class="card-text">Equivalent to 4 blog posts.</p>
-          <h4 class="fw-bold">$90 / month</h4>
-          <a href="#" class="btn btn-success mt-3">Subscribe</a>
-        </div>
+        <a href="#" class="btn btn-primary mt-3">Subscribe</a>
       </div>
     </div>
+  </div>
 
     <!-- Business Plan -->
     <div class="col-md-6 col-lg-3">
-      <div class="card text-center border-warning">
-        <div class="card-header bg-warning text-dark">
+      <div class="card text-center rounded-4 shadow-sm h-100">
+        <div class="card-header bg-info text-white fw-bold fs-5">
           Business
         </div>
-        <div class="card-body">
-          <h5 class="card-title">250 Credits / month</h5>
-          <p class="card-text">Equivalent to 12 blog posts.</p>
-          <h4 class="fw-bold">$200 / month</h4>
-          <a href="#" class="btn btn-warning mt-3 text-white">Subscribe</a>
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div>
+            <h5 class="card-title fs-4 fw-bold">250 Credits / month</h5>
+            <p class="card-text text-muted">Equivalent to 12 blog posts</p>
+            <h4 class="fw-bold text-info">$200 / month</h4>
+            <ul class="list-unstyled text-start mt-3 mb-3">
+              <li>✅ Priority AI Support</li>
+              <li>✅ Custom Automation Consulting</li>
+              <li>✅ Export & Analytics</li>
+              <li>✅ Dedicated Email Support</li>
+            </ul>
+          </div>
+          <a href="#" class="btn btn-info text-white mt-3">Subscribe</a>
         </div>
       </div>
     </div>
 
     <!-- Enterprise Plan -->
     <div class="col-md-6 col-lg-3">
-      <div class="card text-center border-dark">
-        <div class="card-header bg-dark text-white">
+      <div class="card text-center rounded-4 shadow-sm h-100">
+        <div class="card-header bg-dark text-white fw-bold fs-5">
           Enterprise
         </div>
-        <div class="card-body">
-          <h5 class="card-title">2500 Credits / month</h5>
-          <p class="card-text">Equivalent to 100 blog posts.</p>
-          <h4 class="fw-bold">$1750 / month</h4>
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div>
+            <h5 class="card-title fs-4 fw-bold">2500 Credits / month</h5>
+            <p class="card-text text-muted">Equivalent to 100 blog posts</p>
+            <h4 class="fw-bold">$1,750 / month</h4>
+            <ul class="list-unstyled text-start mt-3 mb-3">
+              <li>✅ Dedicated Account Manager</li>
+              <li>✅ Full Automation Suite</li>
+              <li>✅ Analytics Dashboard</li>
+              <li>✅ 24/7 Priority Support</li>
+            </ul>
+          </div>
           <a href="#" class="btn btn-dark mt-3">Subscribe</a>
         </div>
       </div>
@@ -74,7 +111,4 @@
 
   </div>
 </div>
-
-
-
 {% endblock %}
